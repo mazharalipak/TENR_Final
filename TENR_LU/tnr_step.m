@@ -10,8 +10,8 @@ function [ dx, dl,dt,dMM,J] = tnr_step( x, l,z,t, tnr)
 F = tnr.F(x, l, tnr);
 [J,JJ] = tnr.J(x,tnr);
 
-[ G, u, v, E_M] = tnr.G(J, z);
-dGdxl = tnr.dJdxl(x, l, u, v, E_M, tnr);
+[ G, u, v] = tnr.G(J, z);
+dGdxl = tnr.dJdxl(x, l, u, v, tnr);
         
 %% enforcing Lambda>0 condition.............
 
