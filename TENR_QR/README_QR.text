@@ -1,0 +1,20 @@
+The main function:
+[Tole,l,Iter]=tnr_testqr(datain,step);
+
+Tole= tolerance;
+l= Lambda (or maximum loadability in this case).
+Iter= Number of Newton-Raphson iterations.
+
+datain=IEEE cases. i.e. case9,case14...etc.
+
+step= Newton step size...
+
+case9, alpha=0.9;
+case14, alpha=0.75;
+case30, alpha=1;
+case_IEEE30, alpha=1;
+case57, alpha=0.3;
+case118, alpha=0.08;
+case300, alpha=0.03;
+case2383wp, alpha=0.32;
+case3012wp, alpha=0.3;
