@@ -9,3 +9,4 @@ There are four different folders for different choices of Transversality:
 
 Kindly, readme.text file in each folder in order to run these transversality choices for the of testing different IEEE cases.
 
+# Install the corresponding folders in the latest version of the Matpower for computation.
