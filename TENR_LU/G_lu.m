@@ -1,7 +1,9 @@
-function [ G, u, v, E_M] = G_lu(J, z) 
+function [ G, u, v] = G_lu(J, z) 
 %tr_lu Calculate the value of G and its derivatives
 %   x - variable 
 %   J - Jacobian function: evaluates J(x)
+
+%% First option for this LU Transversality is based on a self written lu decomposition rather than Matlab
 
 tol=1e-3;
 [L_Mat, U_Mat, P_Mat, Q_Mat]=lucp(J,tol,'sparse');  
@@ -17,9 +19,7 @@ u=((L_Mat)')\b;
 
 G=U_Mat(end,end);
   
-E_M=sparse(eye(size(J)));
-
-%% Matlab LU decomposition.........................
+%% First option for this LU Transversality is based on Matlab LU decomposition.........................
 
 % [L_Mat, U_Mat, P_Mat, Q_Mat]=lu(J); 
 % New_UMat=bsxfun(@rdivide, U_Mat(1:end,:), diag(U_Mat));
@@ -32,7 +32,7 @@ E_M=sparse(eye(size(J)));
 % 
 % v=(New_UMat)\b;                    
 % 
-% u=((L_Mat))\b;
+% u=((L_Mat))'\b;
 % 
 % G=U_Mat(bb,bb);
 % 
