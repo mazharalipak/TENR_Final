@@ -1,5 +1,5 @@
 
-function [Tole,Iter,l]=tnr_test(datain,step)
+function [Tole,Iter,l]=tnr_testsvd(datain,step)
 %% Input Test case Structure and Intitial start.........................
 t=1;                              % Slack variable for \lambda >0 .....................
 
