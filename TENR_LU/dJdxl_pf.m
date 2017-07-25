@@ -1,4 +1,4 @@
-function [ dJ] = dJdxl_pf(x, l, u, v, E_M, tnr)
+function [ dJ] = dJdxl_pf(x, l, u, v, tnr)
 %pf_dJ evaluate u'*dJ*v: sensitivity of the Jacobian
 %   Detailed explanation goes here
     
@@ -13,10 +13,8 @@ function [ dJ] = dJdxl_pf(x, l, u, v, E_M, tnr)
     
     H_dJ= [Gaa([pv;pq],[pv;pq]) Gav([pv;pq],pq); 
         Gva(pq,[pv;pq])  Gvv(pq,pq)];
-    
-    H_dJ_E= H_dJ*E_M;
-    
-    dJ= real([H_dJ_E*v;0]');
+        
+    dJ= real([H_dJ*v;0]');
     
 end
 
