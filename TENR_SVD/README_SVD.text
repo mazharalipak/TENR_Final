@@ -1,13 +1,17 @@
 The main function:
 [Tole,l,Iter]=tnr_testlu(datain,step);
 
-Tole= tolerance;
-l= Lambda (or maximum loadability in this case).
-Iter= Number of Newton-Raphson iterations.
 
-datain=IEEE cases. i.e. case9,case14...etc.
+%% Output
+1. Tole= tolerance;
+2. l= Lambda (or maximum loadability in this case).
+3. Iter= Number of Newton-Raphson iterations.
 
-step= Newton step size...
+%% Input
+1. datain=IEEE cases. i.e. case9,case14...etc.
+2. step= Newton step size...
+
+%% Values of alpha for global convergence......
 
 case9, alpha=0.37;
 case14, alpha=0.8;
