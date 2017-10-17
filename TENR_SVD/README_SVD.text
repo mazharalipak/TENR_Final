@@ -1,5 +1,5 @@
 The main function:
-[Tole,l,Iter]=tnr_testlu(datain,step);
+[Tole,l,Iter]=tnr_testsvd(datain,step);
 
 
 %% Output
